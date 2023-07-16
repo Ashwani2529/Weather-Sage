@@ -53,7 +53,7 @@ function fetchWeatherData(cityInput) {
       .then(data => {
         let a=`${data.main.temp}`;
         a=Math.floor(a-273.15);
-        temp.innerHTML=`${a} &#176;`;
+        temp.innerHTML=`${a}&#176;`;
         conditionOutput.innerHTML = data.weather[0].description;
         const date = new Date(data.dt * 1000);
         const y = date.getFullYear();
